@@ -50,10 +50,12 @@ class User(AbstractUser):
     def is_moderator(self):
         if self.role == 'moderator':
             return True
+        return False
 
     def is_admin(self):
         if self.role == 'admin':
             return True
+        return False
 
     class Meta:
         ordering = ['-id']

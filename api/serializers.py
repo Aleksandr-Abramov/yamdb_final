@@ -1,5 +1,5 @@
 from rest_framework import serializers, validators
-from rest_framework.generics import get_object_or_404
+# from rest_framework.generics import get_object_or_404
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 from .models import Categories, Comment, Genres, Review, Titles, User
@@ -54,6 +54,7 @@ class GenresSerializers(serializers.ModelSerializer):
         fields = ('name', 'slug')
 
 
+"""
 class DefaultTitleSerializer:
     requires_context = True
 
@@ -61,6 +62,7 @@ class DefaultTitleSerializer:
         title_id = serializer_field.context.get('view').kwargs.get('title_id')
         title = get_object_or_404(Titles, id=title_id)
         return title
+"""
 
 
 class TitlesReadSerializer(serializers.ModelSerializer):
@@ -95,9 +97,11 @@ class ReviewSerializer(serializers.ModelSerializer):
         queryset=Review.objects.all(),
         default=serializers.CurrentUserDefault()
     )
+    """
     title = serializers.HiddenField(
-        default=DefaultTitleSerializer()
+       default=DefaultTitleSerializer()
     )
+    """
 
     class Meta:
         fields = '__all__'
