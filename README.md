@@ -16,5 +16,4 @@
 - Откройте браузер http://62.84.119.13/admin/
 - Введите адрес электронной почты и пароль.
 
-![example workflow](https://github.com/Aleksandr-Abramov/ yamdb_final
-/actions/workflows/yamdb_workflow.yml/badge.svg)
+![example workflow](https://github.com/Aleksandr-Abramov/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
