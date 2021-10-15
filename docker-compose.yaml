@@ -9,7 +9,8 @@ services:
     env_file:
       - ./.env
   web:
-    build: .
+#    build: .
+    image: alexabramov1985/yamdb_final_web
     restart: always
     volumes:
       - static_value:/code/static/
