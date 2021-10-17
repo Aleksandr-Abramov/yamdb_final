@@ -1,4 +1,4 @@
-from typing import Union
+# from typing import Union
 
 from django.contrib.auth.tokens import default_token_generator
 from django.db.models import Avg
@@ -110,7 +110,7 @@ class CategoriesViewSet(CRUDViewSet):
     filterset_fields = ['name']
     search_fields = ['name', ]
     lookup_field = 'slug'
-    permission_classes = [Union[ReadOnly, IsAdminUser]]
+    permission_classes = [ReadOnly or IsAdminUser]
 
 
 class GenresViewSet(CRUDViewSet):
@@ -120,7 +120,7 @@ class GenresViewSet(CRUDViewSet):
     filterset_fields = ['name']
     search_fields = ['name', ]
     lookup_field = 'slug'
-    permission_classes = [Union[ReadOnly, IsAdminUser]]
+    permission_classes = [ReadOnly or IsAdminUser]
 
 
 class TitlesViewSet(viewsets.ModelViewSet):
@@ -128,7 +128,7 @@ class TitlesViewSet(viewsets.ModelViewSet):
         rating=Avg('reviews__score')).order_by('name')
     filter_backends = [DjangoFilterBackend]
     filterset_class = TitleFilter
-    permission_classes = [Union[ReadOnly, IsAdminUser]]
+    permission_classes = [ReadOnly or IsAdminUser]
 
     def get_serializer_class(self):
         if self.request.method in ['POST', 'PATCH']:
