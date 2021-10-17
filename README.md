@@ -13,7 +13,7 @@
 - docker-compose exec web python manage.py migrate --noinput
 - docker-compose exec web python manage.py createsuperuser
 - docker-compose exec web python manage.py collectstatic --no-input
-- Откройте браузер http://62.84.119.13/admin/
+- Откройте браузер http://62.84.119.13/redoc/
 - Введите адрес электронной почты и пароль.
 
 ![example workflow](https://github.com/Aleksandr-Abramov/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
