@@ -31,13 +31,13 @@ info:
 
                 - Откройте браузер http://62.84.119.13/admin/
 
-                - "users": "http://127.0.0.1:8000/api/v1/users/"
+                - "users": "http://62.84.119.13/api/v1/users/"
 
-                - "categories": "http://127.0.0.1:8000/api/v1/categories/"
+                - "categories": "http://62.84.119.13/api/v1/categories/"
 
-                - "genres": "http://127.0.0.1:8000/api/v1/genres/"
+                - "genres": "http://62.84.119.13/api/v1/genres/"
 
-                - "titles": "http://127.0.0.1:8000/api/v1/titles/"
+                - "titles": "http://62.84.119.13/api/v1/titles/"
 
                 - Введите адрес электронной почты и пароль.
                 '
